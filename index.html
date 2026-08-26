@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maverick DNA - The Maverick EcoVerse</title>
+<meta name="description" content="A living ecosystem of evolved entrepreneurs changing the way business is played. Explore the Maverick EcoVerse.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Maverick DNA">
+<meta property="og:url" content="https://maverickdna.com/">
+<meta property="og:title" content="Maverick DNA - The Maverick EcoVerse">
+<meta property="og:description" content="More Profits. More Impact. More Fun. One community of evolved entrepreneurs - and the ecosystem built around it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f0d0a;          /* warm near-black */
+    --bg-2:#171309;        /* warm charcoal panel */
+    --cream:#f4ebd7;       /* primary light */
+    --cream-2:#efe3c8;     /* cream band base */
+    --ink:#191307;         /* warm black text on cream */
+    --ink-dim:#5c4f36;
+    --dim:#b9ad90;         /* muted cream on dark */
+    --faint:#8b7f64;
+    --green:#9dd335; --green-soft:#b7e06a; --green-deep:#7aad20; --green-ink:#0e1607;
+    --gold:#d8c089; --gold-deep:#c1a565;
+    --purple:#a074ff;
+    --line:rgba(244,235,215,.14);
+    --line-strong:rgba(244,235,215,.26);
+    --shadow:0 26px 70px rgba(0,0,0,.5);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .anton{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.005em;line-height:.92}
+  .serif{font-family:'Fraunces','Georgia',serif}
+  .serif-i{font-family:'Fraunces','Georgia',serif;font-style:italic}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--green);color:var(--green-ink)}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 48px}
+  .eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:600;font-size:.95rem;transition:transform .18s ease,background .18s ease,color .18s ease,border-color .18s ease}
+  .btn-primary{background:var(--green);color:var(--green-ink)}
+  .btn-primary:hover{transform:translateY(-2px);background:var(--green-soft)}
+
+  /* ---------- Header ---------- */
+  header{position:absolute;top:0;left:0;right:0;z-index:30}
+  .head-inner{display:flex;align-items:center;justify-content:space-between;padding:32px 0}
+  .logo{height:28px;width:auto}
+  .head-tag{font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--faint)}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:120px 0 70px}
+  #sun{position:absolute;top:-32%;right:-16%;width:78vh;height:78vh;min-width:560px;min-height:560px;z-index:0;opacity:.5;
+    -webkit-mask-image:radial-gradient(closest-side,#000 55%,transparent 100%);mask-image:radial-gradient(closest-side,#000 55%,transparent 100%)}
+  .hero-warm{position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:
+      radial-gradient(52% 60% at 82% 14%,rgba(216,192,137,.16),transparent 60%),
+      radial-gradient(46% 54% at 78% 20%,rgba(157,211,53,.12),transparent 62%),
+      linear-gradient(92deg,var(--bg) 30%,rgba(15,13,10,.35) 62%,transparent 86%)}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{font-size:clamp(3.1rem,8.4vw,6.7rem);max-width:15ch;margin:22px 0 0}
+  .hero h1 .played{font-family:'Fraunces','Georgia',serif;font-style:italic;font-weight:500;text-transform:none;color:var(--green);letter-spacing:-.01em}
+  .hero-sub{font-family:'Fraunces','Georgia',serif;font-style:italic;font-weight:400;font-size:clamp(1.35rem,2.5vw,2rem);color:var(--gold);margin-top:24px;max-width:30ch;line-height:1.28}
+  .hero-lede{margin-top:22px;max-width:52ch;color:var(--dim);font-size:1.06rem;line-height:1.7}
+  .hero-lede strong{color:var(--cream);font-weight:600}
+  .hero-cta{margin-top:34px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  .hero-scroll{color:var(--faint);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase}
+
+  /* ---------- Manifesto / DNA band (CREAM) ---------- */
+  .band{background:var(--cream-2);color:var(--ink)}
+  .manifesto{padding:96px 0 84px;position:relative}
+  .manifesto .eyebrow{color:var(--green-deep)}
+  .manifesto blockquote{margin:20px 0 0;max-width:20ch;font-family:'Fraunces','Georgia',serif;font-weight:500;
+    font-size:clamp(2.3rem,5.4vw,4.2rem);line-height:1.04;letter-spacing:-.01em}
+  .manifesto blockquote em{font-style:italic;color:var(--green-deep)}
+  .manifesto .say{margin-top:26px;max-width:56ch;color:var(--ink-dim);font-size:1.1rem;line-height:1.7}
+  .manifesto .say b{color:var(--ink);font-weight:600}
+
+  .pillars{margin-top:64px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .pillar{position:relative;padding-top:26px;border-top:2px solid var(--ink)}
+  .pillar.p1{border-color:var(--green-deep)}
+  .pillar.p2{border-color:var(--purple)}
+  .pillar.p3{border-color:var(--gold-deep)}
+  .pillar .pk{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--ink-dim)}
+  .pillar h3{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:2.5rem;line-height:1;margin:12px 0 10px}
+  .pillar.p1 h3{color:var(--green-deep)} .pillar.p2 h3{color:var(--purple)} .pillar.p3 h3{color:var(--gold-deep)}
+  .pillar p{color:var(--ink-dim);font-size:1rem;line-height:1.55}
+  .pillar p em{font-style:italic;color:var(--ink)}
+  .belief-close{margin:44px auto 0;max-width:44ch;text-align:center;
+    font-family:'Fraunces','Georgia',serif;font-weight:500;font-size:clamp(1.15rem,2vw,1.55rem);line-height:1.3;color:var(--ink)}
+  .belief-close em{font-style:italic;color:var(--green-deep)}
+
+  /* ---------- EcoVerse (dark) ---------- */
+  .eco{padding:96px 0 28px;position:relative}
+  .eco-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px}
+  .eco-head .eyebrow{color:var(--green)}
+  .eco-head h2{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(2.1rem,4.4vw,3.4rem);line-height:.98;margin-top:12px}
+  .eco-head h2 .g{color:var(--green)}
+  .eco-head p{color:var(--dim);max-width:42ch;font-size:1.02rem}
+  .eco-grid{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .eco-card{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;overflow:hidden;
+    background:linear-gradient(165deg,var(--bg-2),#100d08);border:1px solid var(--line);border-radius:18px;
+    padding:0 26px 26px;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+  .eco-card:hover{transform:translateY(-6px);border-color:var(--line-strong);box-shadow:var(--shadow)}
+  .eco-card::after{content:"";position:absolute;top:-72px;left:50%;transform:translateX(-50%);width:240px;height:150px;
+    border-radius:50%;filter:blur(26px);opacity:.16;transition:opacity .25s ease;pointer-events:none}
+  .eco-card.c1::after{background:var(--green)}
+  .eco-card.c2::after{background:var(--purple)}
+  .eco-card.c3::after{background:var(--gold)}
+  .eco-card:hover::after{opacity:.42}
+  .eco-card .accent{align-self:stretch;height:4px;margin:0 -26px 30px;border-radius:18px 18px 0 0}
+  .eco-card.c1 .accent{background:var(--green)}
+  .eco-card.c2 .accent{background:var(--purple)}
+  .eco-card.c3 .accent{background:var(--gold)}
+  .eco-logo{height:50px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;z-index:1}
+  .eco-logo img{width:auto;object-fit:contain}
+  .eco-logo img.mav{max-height:30px}
+  .eco-logo img.next{max-height:48px}
+  .eco-logo img.camp{max-height:50px}
+  .eco-tag{color:var(--dim);font-size:.94rem;line-height:1.45;max-width:24ch;flex:1;position:relative;z-index:1}
+  .eco-go{margin-top:18px;display:inline-flex;align-items:center;gap:8px;color:var(--cream);font-weight:600;font-size:.9rem;position:relative;z-index:1}
+  .eco-go .url{color:var(--green);font-weight:600}
+  .eco-go .arrow{color:var(--green);transition:transform .2s ease}
+  .eco-card:hover .eco-go .arrow{transform:translate(3px,-3px)}
+
+  /* ---------- 3H strip ---------- */
+  .threeh-band{margin-top:44px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    background:radial-gradient(72% 130% at 50% 0%,rgba(216,192,137,.13),transparent 60%)}
+  .threeh{padding:90px 0;text-align:center}
+  .threeh .eyebrow{color:var(--gold)}
+  .threeh h2{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(2.5rem,6.4vw,4.7rem);margin-top:16px;line-height:.95}
+  .threeh h2 .a{color:var(--gold)}
+  .threeh-say{margin:24px auto 0;max-width:40ch;color:var(--cream);font-family:'Fraunces','Georgia',serif;font-style:italic;font-size:clamp(1.25rem,2.2vw,1.7rem);line-height:1.35}
+
+  /* ---------- Press ---------- */
+  .press{padding:46px 0 0}
+  .press-label{text-align:center;font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--faint);font-weight:600}
+  .press-row{margin-top:26px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:32px 46px}
+  .press-row img{height:22px;width:auto;filter:brightness(0) invert(1);opacity:.46;transition:opacity .2s ease}
+  .press-row img:hover{opacity:.85}
+  .press-row img.tall{height:29px}
+
+  /* ---------- Footer ---------- */
+  footer{padding:56px 0 60px;text-align:center;border-top:1px solid var(--line);margin-top:26px}
+  .foot-label{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--green);font-weight:600}
+  .foot-social{margin-top:20px;display:flex;align-items:center;justify-content:center;gap:16px}
+  .social{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid var(--line);border-radius:50%;transition:border-color .2s ease,transform .2s ease}
+  .social:hover{border-color:var(--green);transform:translateY(-2px)}
+  .social svg{width:19px;height:19px;fill:var(--dim);transition:fill .2s ease}
+  .social:hover svg{fill:var(--green)}
+  .foot-email{margin-top:22px;font-size:1.05rem}
+  .foot-email a{color:var(--cream);border-bottom:1px solid var(--line-strong);padding-bottom:3px;transition:color .2s ease,border-color .2s ease}
+  .foot-email a:hover{color:var(--green);border-color:var(--green)}
+  .foot-copy{margin-top:28px;font-size:.82rem;color:var(--faint)}
+
+  @media(max-width:860px){
+    .pillars{grid-template-columns:1fr;gap:0}
+    .pillar{margin-top:34px}
+    .eco-grid{grid-template-columns:1fr}
+    .hero{min-height:auto;padding:130px 0 80px}
+    #sun{opacity:.32;top:-10%}
+  }
+  @media(max-width:600px){
+    .head-tag{display:none}
+    .wrap{padding:0 24px}
+  }
+  @media(prefers-reduced-motion:reduce){#sun{animation:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap head-inner">
+    <img src="assets/maverick-logo.png" alt="Maverick" class="logo">
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <svg id="sun" viewBox="0 0 100 100" aria-hidden="true"></svg>
+  <div class="hero-warm"></div>
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--green)">The Maverick EcoVerse</p>
+    <h1 class="anton">Changing the Way Business Is <span class="played">played.</span></h1>
+    <p class="hero-sub">A living ecosystem of evolved entrepreneurs.</p>
+    <p class="hero-lede">One shared <strong>Maverick DNA</strong> - a family of integrated companies and communities for founders ready to build businesses that create more profit, more impact and more fun.</p>
+    <div class="hero-cta">
+      <a href="#ecoverse" class="btn btn-primary">Explore the EcoVerse ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MANIFESTO + DNA (cream) ============ -->
+<section class="band">
+  <div class="wrap manifesto">
+    <p class="eyebrow">Our Belief</p>
+    <blockquote class="serif">Business can be the ultimate <em>lever for good.</em></blockquote>
+    <p class="say">That belief is the <b>Maverick DNA</b> - the code every company and community in the EcoVerse is built on, and measured by. Three pillars, held together, never traded off.</p>
+
+    <div class="pillars">
+      <div class="pillar p1">
+        <div class="pk">Pillar 01</div>
+        <h3>Growth</h3>
+        <p>Personal evolution and <em>evolutionary growth</em> - leveling up as a founder and a human, so the business rises with you.</p>
+      </div>
+      <div class="pillar p2">
+        <div class="pk">Pillar 02</div>
+        <h3>Impact</h3>
+        <p>Greater meaning and <em>giving forward</em> - business as a force for good.</p>
+      </div>
+      <div class="pillar p3">
+        <div class="pk">Pillar 03</div>
+        <h3>Fun</h3>
+        <p>Real adventure and <em>genuine joy</em> - because, as we say, if you're not having fun, what's the point!?</p>
+      </div>
+    </div>
+
+    <p class="belief-close serif">Profit with purpose. Ambition with heart. This is how we think business <em>should be played.</em></p>
+  </div>
+</section>
+
+<!-- ============ ECOVERSE ============ -->
+<section class="eco" id="ecoverse">
+  <div class="wrap">
+    <div class="eco-head">
+      <div>
+        <p class="eyebrow">The EcoVerse</p>
+        <h2>Three ways <span class="g">in.</span></h2>
+      </div>
+    </div>
+
+    <div class="eco-grid">
+      <a class="eco-card c1" href="https://www.maverickswanted.com" target="_blank" rel="noopener">
+        <div class="accent"></div>
+        <div class="eco-logo"><img class="mav" src="assets/maverick-logo.png" alt="Mavericks Wanted"></div>
+        <p class="eco-tag">The flagship community of evolved Maverick entrepreneurs.</p>
+        <span class="eco-go">Enter <span class="url">maverickswanted.com</span> <span class="arrow">↗</span></span>
+      </a>
+
+      <a class="eco-card c2" href="https://www.mavericknext.com" target="_blank" rel="noopener">
+        <div class="accent"></div>
+        <div class="eco-logo"><img class="next" src="assets/next-logo-black.png" alt="Maverick NEXT"></div>
+        <p class="eco-tag">Rising founders and next-gen leaders scaling with purpose.</p>
+        <span class="eco-go">Enter <span class="url">mavericknext.com</span> <span class="arrow">↗</span></span>
+      </a>
+
+      <a class="eco-card c3" href="https://www.gocampmaverick.com" target="_blank" rel="noopener">
+        <div class="accent"></div>
+        <div class="eco-logo"><img class="camp" src="assets/camp-logo.png" alt="Camp Maverick"></div>
+        <p class="eco-tag">Summer camp for entrepreneurs - play, adventure and real connection.</p>
+        <span class="eco-go">Enter <span class="url">gocampmaverick.com</span> <span class="arrow">↗</span></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 3H alignment -->
+  <div class="threeh-band">
+    <div class="wrap threeh">
+      <h2 class="anton">Head. Heart. <span class="a">Higher Purpose.</span></h2>
+      <p class="threeh-say serif-i">Imagine a world where every entrepreneur led with all three. That's the world we want to help create - one Maverick at a time.</p>
+    </div>
+  </div>
+
+  <!-- press -->
+  <div class="wrap press">
+    <p class="press-label">Maverick has been featured in</p>
+    <div class="press-row">
+      <img src="assets/press/forbes.svg" alt="Forbes">
+      <img src="assets/press/inc.svg" alt="Inc." class="tall">
+      <img src="assets/press/nyt.svg" alt="The New York Times">
+      <img src="assets/press/wired.svg" alt="Wired">
+      <img src="assets/press/fastcompany.svg" alt="Fast Company">
+      <img src="assets/press/techcrunch.svg" alt="TechCrunch">
+      <img src="assets/press/bloomberg.svg" alt="Bloomberg">
+      <img src="assets/press/entrepreneur.svg" alt="Entrepreneur">
+      <img src="assets/press/latimes.svg" alt="Los Angeles Times">
+      <img src="assets/press/bostonglobe.svg" alt="The Boston Globe">
+      <img src="assets/press/msnbc.svg" alt="MSNBC">
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <p class="foot-label">Connect With Us</p>
+    <div class="foot-social">
+      <a class="social" href="https://www.facebook.com/MaverickDNA" target="_blank" rel="noopener" aria-label="Maverick on Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+      </a>
+      <a class="social" href="https://www.instagram.com/mavdna/" target="_blank" rel="noopener" aria-label="Maverick on Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 3.68a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-10.4a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+      </a>
+    </div>
+    <p class="foot-email"><a href="mailto:admin@maverickdna.com">admin@maverickdna.com</a></p>
+    <p class="foot-copy">© <span id="year"></span> Maverick DNA · The Maverick EcoVerse</p>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+
+<!-- warm sunburst mark (from the Maverick hand) -->
+<script>
+(function(){
+  var svg=document.getElementById('sun'); if(!svg) return;
+  var cx=50,cy=50,rays=48,inner=17,outer=54,ns='http://www.w3.org/2000/svg',g='';
+  for(var i=0;i<rays;i++){
+    var a=(i/rays)*Math.PI*2, w=0.017;
+    var x1=cx+inner*Math.cos(a-w), y1=cy+inner*Math.sin(a-w);
+    var x2=cx+outer*Math.cos(a),   y2=cy+outer*Math.sin(a);
+    var x3=cx+inner*Math.cos(a+w), y3=cy+inner*Math.sin(a+w);
+    var col=(i%2)?'rgba(216,192,137,0.9)':'rgba(157,211,53,0.75)';
+    g+='<path d="M'+x1.toFixed(2)+' '+y1.toFixed(2)+' L'+x2.toFixed(2)+' '+y2.toFixed(2)+' L'+x3.toFixed(2)+' '+y3.toFixed(2)+' Z" fill="'+col+'"/>';
+  }
+  g+='<circle cx="50" cy="50" r="13" fill="none" stroke="rgba(244,235,215,0.5)" stroke-width="0.8"/>';
+  svg.innerHTML=g;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce){
+    svg.style.transformOrigin='50% 50%';
+    var t0=null;
+    function spin(t){ if(t0===null)t0=t; svg.style.transform='rotate('+(((t-t0)/1000)*1.4)+'deg)'; requestAnimationFrame(spin); }
+    requestAnimationFrame(spin);
+  }
+})();
+</script>
+</body>
+</html>
